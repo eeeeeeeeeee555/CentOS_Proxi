@@ -123,7 +123,7 @@ EOF
 
 proxy_txt() {
     cat >proxy.txt <<EOF
-$(awk -F "/" '{print $3 ":" $4 ":" $1 ":" $2 }' ${VERI})
+$(awk -F "/" '{print $1 ":" $2 "@" $3 ":" $4}' ${VERI})
 EOF
 }
 
